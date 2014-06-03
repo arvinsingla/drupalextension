@@ -320,10 +320,6 @@ class DrupalContext extends MinkContext implements DrupalAwareInterface, Transla
 
     // Log in.
     $submit->click();
-
-    if (!$this->loggedIn()) {
-      throw new \Exception(sprintf("Failed to log in as user '%s' with role '%s'", $this->user->name, $this->user->role));
-    }
   }
 
   /**
